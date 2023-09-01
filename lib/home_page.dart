@@ -76,6 +76,10 @@ class _HomePageState extends State<HomePage> {
                         setState(() {
                           _isPressed1 = !_isPressed1;
                         });
+                        ScaffoldMessenger.of(context)
+                          ..hideCurrentSnackBar()
+                          ..showSnackBar(
+                              SnackBar(content: Text("Accesibilidad...")));
                       },
                       color: _isPressed1 ? Colors.indigo : Colors.black,
                     ),
@@ -85,6 +89,10 @@ class _HomePageState extends State<HomePage> {
                         setState(() {
                           _isPressed2 = !_isPressed2;
                         });
+                        ScaffoldMessenger.of(context)
+                          ..hideCurrentSnackBar()
+                          ..showSnackBar(
+                              SnackBar(content: Text("Temporizador...")));
                       },
                       color: _isPressed2 ? Colors.indigo : Colors.black,
                     ),
@@ -94,6 +102,9 @@ class _HomePageState extends State<HomePage> {
                         setState(() {
                           _isPressed3 = !_isPressed3;
                         });
+                        ScaffoldMessenger.of(context)
+                          ..hideCurrentSnackBar()
+                          ..showSnackBar(SnackBar(content: Text("Android...")));
                       },
                       color: _isPressed3 ? Colors.indigo : Colors.black,
                     ),
@@ -103,39 +114,14 @@ class _HomePageState extends State<HomePage> {
                         setState(() {
                           _isPressed4 = !_isPressed4;
                         });
+                        ScaffoldMessenger.of(context)
+                          ..hideCurrentSnackBar()
+                          ..showSnackBar(SnackBar(content: Text("iPhone...")));
                       },
                       color: _isPressed4 ? Colors.indigo : Colors.black,
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          ScaffoldMessenger.of(context)
-                            ..hideCurrentSnackBar()
-                            ..showSnackBar(
-                                SnackBar(content: Text("Correo...")));
-                        },
-                        icon: Icon(Icons.mail)),
-                    IconButton(
-                        onPressed: () {
-                          ScaffoldMessenger.of(context)
-                            ..hideCurrentSnackBar()
-                            ..showSnackBar(
-                                SnackBar(content: Text("Llamada...")));
-                        },
-                        icon: Icon(Icons.call)),
-                    IconButton(
-                        onPressed: () {
-                          ScaffoldMessenger.of(context)
-                            ..hideCurrentSnackBar()
-                            ..showSnackBar(SnackBar(content: Text("Ruta...")));
-                        },
-                        icon: Icon(Icons.route))
-                  ],
-                )
               ],
             ),
           ),
