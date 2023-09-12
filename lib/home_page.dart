@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                         4, // Altura igual a la cuarta parte de la pantalla
                     width: MediaQuery.of(context).size.width,
                     child: Image.asset(
-                      'assets/bosque.jpg', // Ruta a tu asset de imagen
+                      'assets/bosque.jpg', // Ruta al asset de imagen
                       fit: BoxFit
                           .cover, // Ajusta la imagen al tamaño del contenedor
                     ),
